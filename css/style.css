@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+@keyframes snow2{
+    0%{background-position: 0 0, 0 0;}
+    100%{background-position: 10% 600px, 10% 600px;}
+}
+@keyframes snow1{
+    from{background-position: 0 -300px;}
+    20% {background-position: 20% -100px;}
+    40% {background-position: 30% 100px;}
+    to{background-position: 20% 700px;}
+}
+
+@keyframes wheels{
+	0% {
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(360deg);
+	}
+	80%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes car-ride {
+	0% {
+		transform: translate(250%, 0px);
+	}
+	20%{
+		transform: translate(-100px, 0px);
+	}
+	80%{
+		transform: translate(-100px, 0px);
+	}
+	100% {
+		transform: translate(-1200px, 0px);
+	}
+}
+
+@keyframes title {
+	0% {
+	}
+	100% {
+		transform: translate(0px, 0%);
+		opacity: 1;
+	}
+}
+
+@keyframes gift {
+    0% {
+        transform: rotate(0deg);
+	}
+	
+    100% {
+		transform: rotate(360deg);
+	}
+}
+
+body{
+	font-family: "Lato", sans-serif;
+	line-height: 160%;
+	color: #424551;
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+
+.car__container {
+	padding-bottom: 60px;
+    margin-top: 120px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    top: -74px;
+    left: 80px;
+    animation: title 2s ease forwards;
+	transform: translate(0px, 50%);
+	opacity: 0;
+}
+
+.title__img {
+    position: absolute;
+    top: -113px;
+    left: 350px;
+    animation: gift 5s ease 3s infinite;    
+} 
+
+.snow1{
+	background-image: url(../img/snow1.png);
+	position:absolute;
+	width: 100%;
+	height:600px;
+	animation: snow1 18s linear infinite;    
+ }
+
+ .snow2{
+    background-image: url(../img/snow2.png),url(../img/snow3.png);
+    animation: snow2 10s linear infinite;
+    width: 100%;
+    height:600px;
+    position:absolute;
+}
+
+.car__container {
+	position: relative;
+	background: url(../img/christmas-village-g6a2400271_1280.jpg) no-repeat bottom;
+	background-size: cover;
+	height: 860px;
+}
+
+.car__block {
+	animation: car-ride 10s linear forwards;
+	position: relative;
+}
+
+.car__body {
+    background-color: #bb2121;
+    width: 500px;
+    height: 230px;
+    margin: 0 auto;
+    border-radius: 100% 0% 100% 0% / 14% 95% 5% 86%;
+    position: absolute;
+    top: 550px;
+    right: 81px;
+}
+
+.car__title {
+    position: absolute;
+    bottom: 131px;
+    right: 33px;
+    z-index: 1;
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+}
+
+.car__body-window {
+    background-color: #bb2121;
+    width: 99px;
+    height: 78px;
+    position: absolute;
+    top: 605px;
+    right: 545px;
+    border-radius: 100% 0% 100% 0% / 38% 100% 0% 62%;
+}
+
+.car__body-front {
+    background-color: #bb2121;
+    width: 123px;
+    height: 122px;
+    position: absolute;
+    top: 658px;
+    right: 581px;
+    border-radius: 100% 0% 80% 20% / 15% 100% 0% 85%;
+}
+
+.car__window {
+    background-color: #c6f0f9;
+    width: 36px;
+    height: 32px;
+    position: absolute;
+    top: 620px;
+    right: 596px;
+    border-radius: 100% 0% 100% 0% / 38% 100% 0% 62%;
+}
+
+.car__wheel {
+    background-color: sandybrown;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 14px dashed chocolate;
+    top: 733px;
+    right: 408px;
+    position: absolute;
+	animation: wheels 10s linear forwards;
+}
+
+.car__wheel-back {
+    background-color: sandybrown;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 14px dashed chocolate;
+	top: 735px;
+    right: 132px;
+    position: absolute;
+	animation: wheels 10s linear forwards;
+}
+
+
+
+
